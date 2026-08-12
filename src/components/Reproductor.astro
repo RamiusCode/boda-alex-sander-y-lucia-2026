@@ -91,23 +91,23 @@
                 // Reproducir música
                 audio?.play();
                 estaReproduciendo = true;
-                
+
                 // Cambiar iconos
                 iconoPlay?.classList.add("hidden");
                 iconoPause?.classList.remove("hidden");
-                
+
                 // Mostrar ondas de sonido
                 ondasSonido?.classList.remove("hidden");
-                
+
             } else {
                 // Pausar música
                 audio?.pause();
                 estaReproduciendo = false;
-                
+
                 // Cambiar iconos
                 iconoPlay?.classList.remove("hidden");
                 iconoPause?.classList.add("hidden");
-                
+
                 // Ocultar ondas de sonido
                 ondasSonido?.classList.add("hidden");
             }

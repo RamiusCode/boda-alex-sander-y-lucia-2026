@@ -63,7 +63,7 @@
 
     <!-- Audio element (oculto) SIN autoplay -->
     <audio id="audio-player" preload="auto" loop>
-        <source src="/audio/melodia.mp3" type="audio/mpeg">
+        <source src="/audio/melo.mp3" type="audio/mpeg">
         Tu navegador no soporta el elemento de audio.
     </audio>
 
@@ -191,61 +191,43 @@
         const iconoPlay = document.getElementById("icono-play");
         const iconoPause = document.getElementById("icono-pause");
 
-        let estaReproduciendo = false;
-
-        // Función para intentar reproducir con manejo de errores
-        const intentarReproducir = async () => {
-            try {
-                await audio?.play();
-                estaReproduciendo = true;
-                iconoPlay?.classList.add("hidden");
-                iconoPause?.classList.remove("hidden");
-                console.log("🎵 Música iniciada automáticamente");
-            } catch (error) {
-                console.log("⚠️ No se pudo reproducir automáticamente, esperando interacción del usuario");
-                estaReproduciendo = false;
-                iconoPlay?.classList.remove("hidden");
-                iconoPause?.classList.add("hidden");
-            }
+        // Los iconos se pintan a partir del estado REAL del <audio>, no de una
+        // variable aparte: la música también la puede arrancar la portada, y
+        // con una bandera propia el botón se quedaba desfasado.
+        const pintarIconos = () => {
+            const sonando = !!audio && !audio.paused;
+            iconoPlay?.classList.toggle("hidden", sonando);
+            iconoPause?.classList.toggle("hidden", !sonando);
         };
 
+        audio?.addEventListener("play", pintarIconos);
+        audio?.addEventListener("pause", pintarIconos);
+        audio?.addEventListener("ended", pintarIconos);
+        pintarIconos();
+
         // ⭐ INICIAR MÚSICA SOLO AL PRESIONAR "INGRESAR" EN LA PORTADA
-        // La portada dispara este evento al cerrarse
+        // La portada dispara este evento al cerrarse (y ya llama a play() ella
+        // misma dentro del click; esto es el respaldo por si eso falla).
         window.addEventListener("iniciar-musica", () => {
-            if (!estaReproduciendo) {
-                intentarReproducir();
+            if (audio && audio.paused) {
+                audio.play().catch((error) => {
+                    console.log("⚠️ No se pudo reproducir la música:", error);
+                });
             }
         });
 
         // Funcionalidad del botón play/pause
         btnReproducir?.addEventListener("click", (e) => {
-            e.stopPropagation(); // Evitar que active el listener de iniciarConInteraccion
-            
-            if (!estaReproduciendo) {
-                // Reproducir música
-                audio?.play();
-                estaReproduciendo = true;
-                
-                // Cambiar iconos
-                iconoPlay?.classList.add("hidden");
-                iconoPause?.classList.remove("hidden");
-                
-            } else {
-                // Pausar música
-                audio?.pause();
-                estaReproduciendo = false;
-                
-                // Cambiar iconos
-                iconoPlay?.classList.remove("hidden");
-                iconoPause?.classList.add("hidden");
-            }
-        });
+            e.stopPropagation();
+            if (!audio) return;
 
-        // Reiniciar cuando termine la canción (aunque tiene loop)
-        audio?.addEventListener("ended", () => {
-            estaReproduciendo = false;
-            iconoPlay?.classList.remove("hidden");
-            iconoPause?.classList.add("hidden");
+            if (audio.paused) {
+                audio.play().catch((error) => {
+                    console.log("⚠️ No se pudo reproducir la música:", error);
+                });
+            } else {
+                audio.pause();
+            }
         });
 
         // ═══ IMAGEN PRINCIPAL - Fade in desde arriba ═══
