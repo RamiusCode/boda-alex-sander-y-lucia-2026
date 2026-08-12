@@ -2,62 +2,96 @@
 // ComponenteNombresAroFinal.astro
 ---
 
-<section class="relative bg-white w-full py-4 px-6">
+<section class="relative bg-[#FBF5EF] w-full py-8 px-6 overflow-hidden">
+
+    <!-- Línea superior elegante, igual que en la sección de apertura -->
+    <p id="despedida-overline" class="font-serif text-[#A24F35] text-xs sm:text-sm tracking-[0.4em] uppercase text-center mb-4">
+        Con todo nuestro cariño
+    </p>
 
     <!-- Contenedor del aro con nombres -->
-    <div class="relative w-full flex justify-center">
-        <div class="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96">
+    <div class="relative w-full flex justify-center pt-2 pb-8">
+
+        <!-- Hojas decorativas a la izquierda -->
+        <div id="despedida-hojas-izq" class="pointer-events-none absolute top-1/2 -left-6 sm:-left-7 md:-left-8 -translate-y-1/2 w-16 sm:w-20 md:w-24 z-0">
+            <img
+                src="/imagenes/hojas.webp"
+                alt=""
+                class="w-full h-auto object-contain"
+                width="202"
+                height="847"
+                loading="lazy"
+                decoding="async"
+            />
+        </div>
+
+        <!-- Hojas decorativas a la derecha: la misma rama espejada -->
+        <div id="despedida-hojas-der" class="pointer-events-none absolute top-1/2 -right-6 sm:-right-7 md:-right-8 -translate-y-1/2 w-16 sm:w-20 md:w-24 z-0">
+            <img
+                src="/imagenes/hojas.webp"
+                alt=""
+                class="w-full h-auto object-contain scale-x-[-1]"
+                width="202"
+                height="847"
+                loading="lazy"
+                decoding="async"
+            />
+        </div>
+
+        <div class="relative z-10 w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96">
             <!-- Imagen del aro -->
             <img
                 id="despedida-aro"
                 src="/imagenes/aro.webp"
                 alt="Aro decorativo"
-                class="w-full h-full object-contain"
+                class="relative w-full h-full object-contain"
                 loading="lazy"
                 decoding="async"
             />
-
-            <!-- Hoja decorativa abajo a la derecha, junto a los nombres -->
-            <div id="despedida-hoja" class="pointer-events-none absolute -bottom-24 -right-8 w-24 sm:w-28 md:w-32 z-0">
-                <img
-                    src="/imagenes/hojas.webp"
-                    alt="Hojas decorativas"
-                    class="w-full h-auto object-contain scale-x-[-1]"
-                    style="opacity: 0.25;"
-                loading="lazy"
-                decoding="async"
-            />
-            </div>
 
             <!-- Nombres de los novios centrados -->
             <div class="absolute inset-0 flex flex-col items-center justify-center">
-                <h2 id="despedida-nombre-john" class="font-great-vibes text-5xl sm:text-6xl md:text-7xl text-[#810100] tracking-wide">
-                    Valeria
+                <h2 id="despedida-nombre-john" class="font-great-vibes text-4xl sm:text-5xl md:text-6xl text-[#A24F35] tracking-wide">
+                    Alex Sander
                 </h2>
-                <div id="despedida-ampersand" class="text-[#810100] text-3xl sm:text-4xl md:text-5xl font-charm my-2">
-                    &
+                <div id="despedida-ampersand" class="flex items-center gap-3 my-1">
+                    <span class="w-6 sm:w-8 h-px bg-[#A24F35]/50"></span>
+                    <span class="text-[#A24F35] text-3xl sm:text-4xl md:text-5xl font-charm">&amp;</span>
+                    <span class="w-6 sm:w-8 h-px bg-[#A24F35]/50"></span>
                 </div>
-                <h2 id="despedida-nombre-damarys" class="font-great-vibes text-5xl sm:text-6xl md:text-7xl text-[#810100] tracking-wide">
-                    Andrés
+                <h2 id="despedida-nombre-damarys" class="font-great-vibes text-4xl sm:text-5xl md:text-6xl text-[#A24F35] tracking-wide">
+                    Lucía
                 </h2>
             </div>
         </div>
     </div>
 
-    <!-- Mensaje de despedida + confirmación -->
-    <div class="max-w-md mx-auto text-center flex flex-col items-center px-6 mt-2">
+    <!-- Mensaje de despedida -->
+    <div class="relative z-10 max-w-md mx-auto text-center flex flex-col items-center">
 
         <!-- Divisor ornamental -->
         <div id="despedida-divisor" class="flex items-center justify-center gap-4 mb-5">
-            <span class="block w-12 sm:w-16 h-px bg-gradient-to-r from-transparent to-[#810100]/70"></span>
-            <span class="text-[#810100] text-sm leading-none">&#10070;</span>
-            <span class="block w-12 sm:w-16 h-px bg-gradient-to-l from-transparent to-[#810100]/70"></span>
+            <span class="block w-12 sm:w-16 h-px bg-gradient-to-r from-transparent to-[#A24F35]/70"></span>
+            <span class="text-[#A24F35] text-sm leading-none">&#10070;</span>
+            <span class="block w-12 sm:w-16 h-px bg-gradient-to-l from-transparent to-[#A24F35]/70"></span>
         </div>
 
         <!-- Mensaje -->
-        <p id="despedida-mensaje" class="font-serif text-[#1B1717] text-sm sm:text-base tracking-[0.12em] leading-relaxed">
+        <p id="despedida-mensaje" class="font-serif text-[#3B2A22] text-sm sm:text-base tracking-[0.12em] leading-relaxed">
             NOS HARÁ MUY FELICES<br />CONTAR CON TU PRESENCIA
         </p>
+
+        <!-- Frase de cierre en caligrafía -->
+        <p id="despedida-cierre" class="font-great-vibes text-[clamp(2.1rem,8.8vw,3.5rem)] leading-tight text-[#A24F35] tracking-wide whitespace-nowrap mt-6">
+            ¡Te esperamos!
+        </p>
+
+        <!-- Cierre ornamental -->
+        <div id="despedida-cierre-ornamento" class="flex items-center justify-center gap-3 mt-4">
+            <span class="block w-10 sm:w-14 h-px bg-gradient-to-r from-transparent to-[#A24F35]/60"></span>
+            <span class="w-1.5 h-1.5 rotate-45 bg-[#A24F35]"></span>
+            <span class="block w-10 sm:w-14 h-px bg-gradient-to-l from-transparent to-[#A24F35]/60"></span>
+        </div>
 
     </div>
 
@@ -74,6 +108,29 @@
 
     document.addEventListener("DOMContentLoaded", () => {
         console.log("💍 Iniciando animaciones de nombres en aro final...");
+
+        // Disparador común de la sección
+        const stDesp = { trigger: "#despedida-aro", start: "top 85%", toggleActions: "play none none reverse" };
+
+        // ═══ LÍNEA SUPERIOR "CON TODO NUESTRO CARIÑO" ═══
+        gsap.fromTo(
+            "#despedida-overline",
+            { opacity: 0, y: -20 },
+            { opacity: 1, y: 0, duration: 0.8, ease: "power2.out", scrollTrigger: stDesp }
+        );
+
+        // ═══ HOJAS DECORATIVAS - Entran en espejo desde cada lado ═══
+        gsap.fromTo(
+            "#despedida-hojas-izq",
+            { opacity: 0, x: -120, rotation: -6 },
+            { opacity: 1, x: 0, rotation: 0, duration: 1.3, ease: "power3.out", delay: 0.4, scrollTrigger: stDesp }
+        );
+
+        gsap.fromTo(
+            "#despedida-hojas-der",
+            { opacity: 0, x: 120, rotation: 6 },
+            { opacity: 1, x: 0, rotation: 0, duration: 1.3, ease: "power3.out", delay: 0.4, scrollTrigger: stDesp }
+        );
 
         // ═══ ARO DECORATIVO - Scale desde el centro ═══
         gsap.fromTo(
@@ -117,7 +174,7 @@
         });
 
         // ═══ NOMBRE OMAR - Letra por letra ═══
-        const textoNovio = "Valeria";
+        const textoNovio = "Alex Sander";
         const contenedorNovio = document.getElementById("despedida-nombre-john");
         if (contenedorNovio) {
             contenedorNovio.innerHTML = textoNovio
@@ -153,7 +210,7 @@
         );
 
         // ═══ NOMBRE VALENTINA - Letra por letra ═══
-        const textoNovia = "Andrés";
+        const textoNovia = "Lucía";
         const contenedorNovia = document.getElementById("despedida-nombre-damarys");
         if (contenedorNovia) {
             contenedorNovia.innerHTML = textoNovia
@@ -207,6 +264,34 @@
             }
         );
 
+        // ═══ FRASE DE CIERRE "¡TE ESPERAMOS!" ═══
+        gsap.fromTo(
+            "#despedida-cierre",
+            { opacity: 0, scale: 0.7 },
+            {
+                opacity: 1,
+                scale: 1,
+                duration: 0.9,
+                ease: "back.out(1.6)",
+                delay: 0.4,
+                scrollTrigger: { trigger: "#despedida-divisor", start: "top 85%", toggleActions: "play none none reverse" }
+            }
+        );
+
+        // ═══ ORNAMENTO FINAL ═══
+        gsap.fromTo(
+            "#despedida-cierre-ornamento",
+            { opacity: 0, scaleX: 0.4 },
+            {
+                opacity: 1,
+                scaleX: 1,
+                duration: 0.8,
+                ease: "power2.out",
+                delay: 0.9,
+                scrollTrigger: { trigger: "#despedida-divisor", start: "top 85%", toggleActions: "play none none reverse" }
+            }
+        );
+
         console.log("✨ Animaciones de nombres en aro final completadas!");
     });
 </script>
@@ -227,7 +312,7 @@
 
         .letra-animada:hover {
             transform: translateY(-3px) scale(1.1) !important;
-            text-shadow: 0 0 15px rgba(129, 1, 0, 0.5) !important;
+            text-shadow: 0 0 15px rgba(162, 79, 53, 0.5) !important;
         }
     }
 </style>

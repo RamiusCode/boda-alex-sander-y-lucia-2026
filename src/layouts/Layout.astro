@@ -14,7 +14,7 @@ const { title } = Astro.props;
     <!-- Fuerza modo claro: el navegador NO debe aplicar su tema oscuro -->
     <meta name="color-scheme" content="only light" />
     <meta name="supported-color-schemes" content="light" />
-    <meta name="theme-color" content="#FFFFFF" />
+    <meta name="theme-color" content="#FBF5EF" />
     <link rel="icon" type="image/png" href="/iconos/Anillos.png" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
@@ -46,7 +46,7 @@ const { title } = Astro.props;
     height: 100%;
     overflow-x: hidden; /* ← Elimina scroll horizontal */
     color-scheme: only light;
-    background-color: #FFFFFF;
+    background-color: #FBF5EF;
     /* Evita que iOS/Android reajusten el tamaño de texto */
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
@@ -59,7 +59,7 @@ body {
     min-height: 100vh;
     overflow-x: hidden; /* ← Elimina scroll horizontal */
     /* Fondo blanco limpio, sin degradados */
-    background-color: #FFFFFF;
+    background-color: #FBF5EF;
     background-image: none;
     color: var(--negro);
     color-scheme: only light;
@@ -82,7 +82,7 @@ body {
         html,
         body {
           forced-color-adjust: none;
-          background-color: #FFFFFF;
+          background-color: #FBF5EF;
         }
       }
 

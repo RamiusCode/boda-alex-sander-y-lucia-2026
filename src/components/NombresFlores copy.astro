@@ -10,13 +10,13 @@
         <!-- Círculo del reproductor -->
         <button
             id="btn-reproducir"
-            class="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-[#810100] to-[#5C0100] shadow-xl flex items-center justify-center border-2 border-white/60"
+            class="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-[#A24F35] to-[#7B3823] shadow-xl flex items-center justify-center border-2 border-white/60"
             title="Reproducir/Pausar música"
         >
             <!-- Ícono de PLAY: solo la nota musical (visible cuando está pausada) -->
             <svg
                 id="icono-play"
-                class="hidden w-9 h-9 sm:w-11 sm:h-11 text-white drop-shadow-lg"
+                class="hidden w-9 h-9 sm:w-11 sm:h-11 text-[#FBF5EF] drop-shadow-lg"
                 fill="currentColor"
                 viewBox="0 0 24 24"
             >
@@ -33,7 +33,7 @@
             <!-- Ícono de PAUSA: la misma nota con una línea en chanfle (visible mientras suena) -->
             <svg
                 id="icono-pause"
-                class="w-9 h-9 sm:w-11 sm:h-11 text-white drop-shadow-lg"
+                class="w-9 h-9 sm:w-11 sm:h-11 text-[#FBF5EF] drop-shadow-lg"
                 fill="currentColor"
                 viewBox="0 0 24 24"
             >
@@ -85,7 +85,7 @@
             <div class="pointer-events-none absolute inset-4 sm:inset-6 border border-white/40"></div>
 
             <!-- Degradado de desvanecimiento -->
-            <div id="degradado" class="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-white to-transparent"></div>
+            <div id="degradado" class="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-[#FBF5EF] to-transparent"></div>
         </div>
     </div>
 
@@ -93,20 +93,20 @@
     <div id="texto-invitacion" class="relative w-full px-6 pt-4 pb-2 text-center flex flex-col items-center">
 
         <!-- Línea superior elegante -->
-        <p class="font-serif text-[#810100] text-xs sm:text-sm tracking-[0.4em] uppercase mb-3">
+        <p class="font-serif text-[#A24F35] text-xs sm:text-sm tracking-[0.4em] uppercase mb-3">
             Con amor
         </p>
 
-        <p class="font-serif text-[#1B1717] text-base sm:text-lg md:text-xl tracking-wide leading-relaxed">
+        <p class="font-serif text-[#3B2A22] text-base sm:text-lg md:text-xl tracking-wide leading-relaxed">
             TENEMOS EL HONOR<br />
             DE INVITARTE A NUESTRA BODA
         </p>
 
         <!-- Divisor ornamental dorado -->
         <div id="divisor-texto" class="flex items-center gap-4 mt-4">
-            <span class="block w-12 sm:w-20 h-px bg-gradient-to-r from-transparent to-[#810100]/70"></span>
-            <span class="text-[#810100] text-base leading-none tracking-widest">&#10070;</span>
-            <span class="block w-12 sm:w-20 h-px bg-gradient-to-l from-transparent to-[#810100]/70"></span>
+            <span class="block w-12 sm:w-20 h-px bg-gradient-to-r from-transparent to-[#A24F35]/70"></span>
+            <span class="text-[#A24F35] text-base leading-none tracking-widest">&#10070;</span>
+            <span class="block w-12 sm:w-20 h-px bg-gradient-to-l from-transparent to-[#A24F35]/70"></span>
         </div>
     </div>
 
@@ -119,7 +119,6 @@
                 src="/imagenes/hojas.webp"
                 alt="Hojas decorativas"
                 class="w-full h-auto object-contain"
-                style="opacity: 0.25;"
             />
         </div>
 
@@ -135,15 +134,15 @@
 
             <!-- Nombres de los novios centrados -->
             <div class="absolute inset-0 flex flex-col items-center justify-center">
-                <h2 id="nombre-john" class="font-great-vibes text-4xl sm:text-5xl md:text-6xl text-[#810100] tracking-wide">
+                <h2 id="nombre-john" class="font-great-vibes text-4xl sm:text-5xl md:text-6xl text-[#A24F35] tracking-wide">
                     Valeria
                 </h2>
                 <div id="ampersand" class="flex items-center gap-3 my-1">
-                    <span class="w-6 sm:w-8 h-px bg-[#810100]/50"></span>
-                    <span class="text-[#810100] text-3xl sm:text-4xl md:text-5xl font-charm">&amp;</span>
-                    <span class="w-6 sm:w-8 h-px bg-[#810100]/50"></span>
+                    <span class="w-6 sm:w-8 h-px bg-[#A24F35]/50"></span>
+                    <span class="text-[#A24F35] text-3xl sm:text-4xl md:text-5xl font-charm">&amp;</span>
+                    <span class="w-6 sm:w-8 h-px bg-[#A24F35]/50"></span>
                 </div>
-                <h2 id="nombre-damarys" class="font-great-vibes text-4xl sm:text-5xl md:text-6xl text-[#810100] tracking-wide">
+                <h2 id="nombre-damarys" class="font-great-vibes text-4xl sm:text-5xl md:text-6xl text-[#A24F35] tracking-wide">
                     Andrés
                 </h2>
             </div>
@@ -365,7 +364,7 @@
 
     .letra-animada:hover {
         transform: translateY(-3px) scale(1.1) !important;
-        text-shadow: 0 0 15px rgba(129, 1, 0, 0.5) !important;
+        text-shadow: 0 0 15px rgba(162, 79, 53, 0.5) !important;
     }
 
     /* Responsivo */

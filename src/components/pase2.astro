@@ -18,23 +18,23 @@ const mensajePorDefecto =
 const textoMensaje = mensaje ?? mensajePorDefecto;
 ---
 
-<section class="relative bg-white w-full py-2">
+<section class="relative bg-[#FBF5EF] w-full py-2">
 
     <div class="max-w-2xl mx-auto">
 
         <!-- Contenedor principal con fondo rojo -->
         <div
             id="pase-container"
-            class="relative bg-[#810100] rounded-lg p-6 sm:p-8 text-center shadow-2xl overflow-hidden"
+            class="relative bg-[#A24F35] rounded-lg p-6 sm:p-8 text-center shadow-2xl overflow-hidden"
         >
 
             <!-- Borde interior fino (detalle elegante) -->
-            <span class="pointer-events-none absolute inset-3 sm:inset-4 border border-[#DCDEDB]/30 rounded"></span>
+            <span class="pointer-events-none absolute inset-3 sm:inset-4 border border-[#EFE0D3]/30 rounded"></span>
 
             <div class="relative z-10 flex flex-col items-center">
 
                 <!-- Ícono de pases -->
-                <div id="icono-pase" class="mb-5 text-white">
+                <div id="icono-pase" class="mb-5 text-[#FBF5EF]">
                     <svg
                         class="w-20 h-14 sm:w-24 sm:h-16"
                         viewBox="0 0 72 48"
@@ -59,26 +59,26 @@ const textoMensaje = mensaje ?? mensajePorDefecto;
                 </div>
 
                 <!-- "PASES ASIGNADOS" -->
-                <p id="texto-reservado" class="text-white text-sm sm:text-base font-serif uppercase tracking-[0.3em]">
+                <p id="texto-reservado" class="text-[#FBF5EF] text-sm sm:text-base font-serif uppercase tracking-[0.3em]">
                     Pases asignados
                 </p>
 
                 <!-- Número de pases -->
-                <p id="numero-pase" class="mt-3 font-serif text-[#DCDEDB] text-[clamp(3rem,14vw,4.5rem)] leading-none">
+                <p id="numero-pase" class="mt-3 font-serif text-[#EFE0D3] text-[clamp(3rem,14vw,4.5rem)] leading-none">
                     {pases}
                 </p>
 
                 <!-- "PASES" con líneas a los costados -->
                 <div id="texto-pase" class="mt-3 flex items-center justify-center gap-3">
-                    <span class="block w-10 sm:w-14 h-px bg-gradient-to-r from-transparent to-[#DCDEDB]"></span>
-                    <span class="text-[#DCDEDB] text-sm sm:text-base font-serif uppercase tracking-[0.3em]">
+                    <span class="block w-10 sm:w-14 h-px bg-gradient-to-r from-transparent to-[#EFE0D3]"></span>
+                    <span class="text-[#EFE0D3] text-sm sm:text-base font-serif uppercase tracking-[0.3em]">
                         {pases === 1 ? "Pase" : "Pases"}
                     </span>
-                    <span class="block w-10 sm:w-14 h-px bg-gradient-to-l from-transparent to-[#DCDEDB]"></span>
+                    <span class="block w-10 sm:w-14 h-px bg-gradient-to-l from-transparent to-[#EFE0D3]"></span>
                 </div>
 
                 <!-- Mensaje -->
-                <p id="texto-honor" class="mt-6 font-great-vibes text-white text-[clamp(1.5rem,6.5vw,2.1rem)] leading-snug">
+                <p id="texto-honor" class="mt-6 font-great-vibes text-[#FBF5EF] text-[clamp(1.5rem,6.5vw,2.1rem)] leading-snug">
                     {textoMensaje}
                 </p>
 
@@ -86,9 +86,9 @@ const textoMensaje = mensaje ?? mensajePorDefecto;
                 <div id="avatares-pase" class="mt-6 flex items-center justify-center gap-4">
                     {
                         Array.from({ length: pases }).map(() => (
-                            <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white/10 border border-[#DCDEDB]/50 flex items-center justify-center">
+                            <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white/10 border border-[#EFE0D3]/50 flex items-center justify-center">
                                 <svg
-                                    class="w-6 h-6 text-white"
+                                    class="w-6 h-6 text-[#FBF5EF]"
                                     viewBox="0 0 24 24"
                                     fill="none"
                                     stroke="currentColor"

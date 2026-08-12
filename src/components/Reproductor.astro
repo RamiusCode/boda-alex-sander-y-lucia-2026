@@ -11,13 +11,13 @@
         <!-- Círculo del reproductor con efecto blur -->
         <button 
             id="btn-reproducir"
-            class="relative w-16 h-16 sm:w-20 sm:h-20 rounded-full backdrop-blur-md bg-gradient-to-br from-[#810100]/45 to-[#1B1717]/45 shadow-xl flex items-center justify-center transition-all duration-300 hover:scale-105 border-2 border-white/40 hover:border-[#810100]/60"
+            class="relative w-16 h-16 sm:w-20 sm:h-20 rounded-full backdrop-blur-md bg-gradient-to-br from-[#A24F35]/45 to-[#3B2A22]/45 shadow-xl flex items-center justify-center transition-all duration-300 hover:scale-105 border-2 border-white/40 hover:border-[#A24F35]/60"
             title="Reproducir música"
         >
             <!-- Ícono de Play (visible inicialmente) -->
             <svg 
                 id="icono-play" 
-                class="w-6 h-6 sm:w-8 sm:h-8 text-white drop-shadow-lg transition-all duration-300"
+                class="w-6 h-6 sm:w-8 sm:h-8 text-[#FBF5EF] drop-shadow-lg transition-all duration-300"
                 fill="currentColor" 
                 viewBox="0 0 24 24"
             >
@@ -27,7 +27,7 @@
             <!-- Ícono de Pause (oculto inicialmente) -->
             <svg 
                 id="icono-pause" 
-                class="hidden w-6 h-6 sm:w-8 sm:h-8 text-white drop-shadow-lg transition-all duration-300"
+                class="hidden w-6 h-6 sm:w-8 sm:h-8 text-[#FBF5EF] drop-shadow-lg transition-all duration-300"
                 fill="currentColor" 
                 viewBox="0 0 24 24"
             >
@@ -37,7 +37,7 @@
         
         <!-- Ondas de sonido animadas (cuando está reproduciendo) -->
         <div id="ondas-sonido" class="hidden absolute inset-0 pointer-events-none">
-            <div class="absolute inset-0 rounded-full border-2 border-[#810100]/50 opacity-75 animate-ping"></div>
+            <div class="absolute inset-0 rounded-full border-2 border-[#A24F35]/50 opacity-75 animate-ping"></div>
             <div class="absolute inset-0 rounded-full border-2 border-white/30 opacity-50 animate-ping" style="animation-delay: 0.5s;"></div>
         </div>
     </div>
@@ -126,7 +126,7 @@
 <style>
     /* Efecto de brillo sutil al hacer hover */
     #btn-reproducir:hover {
-        box-shadow: 0 0 25px rgba(129, 1, 0, 0.4);
+        box-shadow: 0 0 25px rgba(162, 79, 53, 0.4);
     }
 
     /* Ondas animadas */

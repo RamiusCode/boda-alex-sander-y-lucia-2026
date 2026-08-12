@@ -2,33 +2,32 @@
 // Galeria.astro
 ---
 
-<section class="relative w-full pt-2 pb-12 overflow-hidden bg-white">
+<section class="relative w-full pt-14 sm:pt-20 pb-12 overflow-hidden bg-[#FBF5EF]">
+
+    <!-- Separador de sección: despega la galería del bloque de confirmación -->
+    <div id="separador-galeria" class="mx-auto mb-12 sm:mb-16 w-40 sm:w-56 h-px bg-gradient-to-r from-transparent via-[#A24F35]/45 to-transparent"></div>
 
     <!-- TÍTULO ELEGANTE -->
     <div class="text-center mb-10 px-6" id="titulo-galeria">
 
         <!-- Ornamento superior -->
         <div class="flex items-center justify-center gap-4 mb-5">
-            <span class="block w-12 sm:w-16 h-px bg-gradient-to-r from-transparent to-[#810100]/70"></span>
-            <span class="text-[#810100] text-sm leading-none">&#10070;</span>
-            <span class="block w-12 sm:w-16 h-px bg-gradient-to-l from-transparent to-[#810100]/70"></span>
+            <span class="block w-12 sm:w-16 h-px bg-gradient-to-r from-transparent to-[#A24F35]/70"></span>
+            <span class="text-[#A24F35] text-sm leading-none">&#10070;</span>
+            <span class="block w-12 sm:w-16 h-px bg-gradient-to-l from-transparent to-[#A24F35]/70"></span>
         </div>
 
-        <h2 class="font-great-vibes text-5xl sm:text-6xl md:text-7xl text-[#810100] tracking-wide">
+        <h2 class="font-great-vibes text-[clamp(2.1rem,8.8vw,3.5rem)] leading-tight text-[#A24F35] tracking-wide whitespace-nowrap">
             Nuestra Historia
         </h2>
 
-        <p class="font-serif text-xs sm:text-sm md:text-base text-[#1B1717] mt-3 tracking-[0.25em] uppercase">
+        <p class="font-serif text-xs sm:text-sm md:text-base text-[#3B2A22] mt-3 tracking-[0.25em] uppercase">
             Cada momento capturado es un tesoro eterno
         </p>
     </div>
 
     <!-- SLIDER (automático + control con dedo/mouse) -->
     <div class="slider-galeria relative w-full">
-
-        <!-- Difuminado en los bordes -->
-        <div class="pointer-events-none absolute inset-y-0 left-0 w-16 sm:w-28 bg-gradient-to-r from-white to-transparent z-10"></div>
-        <div class="pointer-events-none absolute inset-y-0 right-0 w-16 sm:w-28 bg-gradient-to-l from-white to-transparent z-10"></div>
 
         <div id="slider-viewport" class="slider-viewport w-full overflow-x-auto">
             <div id="slider-track" class="flex w-max select-none">
@@ -41,7 +40,7 @@
     <div class="text-center mt-10 px-6">
         <button
             id="abrir-galeria"
-            class="group relative inline-flex items-center gap-3 px-9 py-3.5 bg-[#810100] text-white font-serif text-sm sm:text-base uppercase tracking-[0.2em] rounded-lg shadow-md hover:bg-[#5C0100] hover:-translate-y-0.5 transition-all duration-300"
+            class="group relative inline-flex items-center gap-3 px-9 py-3.5 bg-[#A24F35] text-white font-serif text-sm sm:text-base uppercase tracking-[0.2em] rounded-lg shadow-md hover:bg-[#7B3823] hover:-translate-y-0.5 transition-all duration-300"
         >
             <span class="pointer-events-none absolute inset-1.5 rounded border border-white/30 transition-all duration-300 group-hover:inset-[7px]"></span>
             <svg class="relative w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -67,7 +66,7 @@
         <div class="relative w-full h-full flex items-center justify-center px-2 md:px-16 lg:px-24">
 
             <!-- Botón anterior -->
-            <button id="btn-anterior" class="absolute left-4 md:left-8 lg:left-12 w-14 h-14 md:w-16 md:h-16 rounded-full bg-white/10 hover:bg-[#810100]/30 backdrop-blur-2xl flex items-center justify-center transition-all duration-300 z-40 border border-white/20 hover:border-[#810100]/50 group hover:scale-110">
+            <button id="btn-anterior" class="absolute left-4 md:left-8 lg:left-12 w-14 h-14 md:w-16 md:h-16 rounded-full bg-white/10 hover:bg-[#A24F35]/30 backdrop-blur-2xl flex items-center justify-center transition-all duration-300 z-40 border border-white/20 hover:border-[#A24F35]/50 group hover:scale-110">
                 <svg class="w-7 h-7 text-white group-hover:-translate-x-0.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
                 </svg>
@@ -111,7 +110,7 @@
             </div>
 
             <!-- Botón siguiente -->
-            <button id="btn-siguiente" class="absolute right-4 md:right-8 lg:right-12 w-14 h-14 md:w-16 md:h-16 rounded-full bg-white/10 hover:bg-[#810100]/30 backdrop-blur-2xl flex items-center justify-center transition-all duration-300 z-40 border border-white/20 hover:border-[#810100]/50 group hover:scale-110">
+            <button id="btn-siguiente" class="absolute right-4 md:right-8 lg:right-12 w-14 h-14 md:w-16 md:h-16 rounded-full bg-white/10 hover:bg-[#A24F35]/30 backdrop-blur-2xl flex items-center justify-center transition-all duration-300 z-40 border border-white/20 hover:border-[#A24F35]/50 group hover:scale-110">
                 <svg class="w-7 h-7 text-white group-hover:translate-x-0.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
                 </svg>
@@ -135,7 +134,7 @@
 
             <!-- Título -->
             <div class="text-center mb-8">
-                <h3 class="font-great-vibes text-4xl sm:text-5xl text-[#810100]">Nuestra Historia</h3>
+                <h3 class="font-great-vibes text-4xl sm:text-5xl text-[#A24F35]">Nuestra Historia</h3>
                 <p class="font-serif text-white/60 text-xs sm:text-sm tracking-[0.25em] uppercase mt-2">Galería completa</p>
             </div>
 
@@ -176,10 +175,10 @@
             );
 
             const fotos = [
-                { src: "/imagenes/foto1.jpg", titulo: "Momento Especial 1" },
-                { src: "/imagenes/foto2.jpg", titulo: "Momento Especial 2" },
-                { src: "/imagenes/foto3.jpg", titulo: "Momento Especial 3" },
-                { src: "/imagenes/foto4.jpg", titulo: "Momento Especial 4" }
+                { src: "/imagenes/foto2.webp", titulo: "Momento Especial 1" },
+                { src: "/imagenes/foto3.webp", titulo: "Momento Especial 2" },
+                { src: "/imagenes/foto4.webp", titulo: "Momento Especial 3" },
+                { src: "/imagenes/foto5.webp", titulo: "Momento Especial 4" }
             ];
 
             let indiceActual = 0;
@@ -203,7 +202,7 @@
                     slide.className = "min-w-full flex items-center justify-center px-4 md:px-12";
                     slide.innerHTML = `
                         <div class="relative max-w-5xl w-full">
-                            <div class="absolute -inset-12 bg-gradient-to-r from-[#810100]/20 via-[#810100]/30 to-[#810100]/20 rounded-3xl blur-3xl opacity-50"></div>
+                            <div class="absolute -inset-12 bg-gradient-to-r from-[#A24F35]/20 via-[#A24F35]/30 to-[#A24F35]/20 rounded-3xl blur-3xl opacity-50"></div>
                             <div class="relative backdrop-blur-sm rounded-3xl overflow-hidden border-2 border-white/10 shadow-2xl">
                                 <img src="${foto.src}" alt="${foto.titulo}" class="w-full h-auto max-h-[75vh] md:max-h-[82vh] object-contain bg-black/20"
                 loading="lazy"
@@ -240,7 +239,7 @@
                         if (idx === indiceActual) {
                             dot.style.width = '2rem';
                             dot.style.height = '0.75rem';
-                            dot.style.backgroundColor = '#810100';
+                            dot.style.backgroundColor = '#A24F35';
                         } else {
                             dot.style.width = '0.75rem';
                             dot.style.height = '0.75rem';
@@ -273,7 +272,7 @@
             if (sliderTrack) {
                 const crearCard = (foto: {src: string, titulo: string}, index: number) => {
                     const card = document.createElement("button");
-                    card.className = "slider-card group relative shrink-0 w-52 sm:w-60 md:w-72 aspect-[3/4] mr-4 sm:mr-6 rounded-2xl overflow-hidden shadow-md border border-[#810100]/20 focus:outline-none";
+                    card.className = "slider-card group relative shrink-0 w-52 sm:w-60 md:w-72 aspect-[3/4] mr-4 sm:mr-6 rounded-2xl overflow-hidden shadow-md border border-[#A24F35]/20 focus:outline-none";
                     card.dataset.index = index.toString();
                     card.innerHTML = `
                         <img src="${foto.src}" alt="${foto.titulo}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 pointer-events-none" loading="lazy" draggable="false" />
@@ -479,7 +478,7 @@
 
     .slider-card:hover {
         transform: translateY(-6px);
-        box-shadow: 0 18px 40px -18px rgba(129, 1, 0, 0.5);
+        box-shadow: 0 18px 40px -18px rgba(162, 79, 53, 0.5);
     }
 
     /* ═══ Modal ═══ */
@@ -499,7 +498,7 @@
     #modal-galeria button:active { transform: scale(0.95); }
 
     button:focus-visible {
-        outline: 2px solid #810100;
+        outline: 2px solid #A24F35;
         outline-offset: 3px;
     }
 

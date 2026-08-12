@@ -1,35 +1,53 @@
 @import "tailwindcss";
 
 /* ═══════════════════════════════════════════════════════════ */
-/* 🎨 PALETA DE LA INVITACIÓN (colores.jpeg)                   */
-/*    Cherry Red · Light Grey · Noir Black                     */
+/* 🎨 PALETA DE LA INVITACIÓN — TEMÁTICA TERRACOTA             */
+/*    Terracota · Arena · Crema · Marrón cálido                */
 /* ═══════════════════════════════════════════════════════════ */
 :root {
-  /* Cherry Red #810100 — color principal */
-  --rojo: #810100;
-  --rojo-oscuro: #5C0100;  /* hover / profundidad */
-  --rojo-suave: rgba(129, 1, 0, 0.30);
+  /* Terracota #A24F35 — color principal (títulos, botones, bordes) */
+  --terracota: #A24F35;
+  --terracota-oscuro: #7B3823;  /* hover / profundidad */
+  --terracota-claro: #C0714F;   /* acentos y degradados */
+  --terracota-suave: rgba(162, 79, 53, 0.30);
 
-  /* Light Grey #DCDEDB — fondos y acentos sobre rojo */
-  --gris-claro: #DCDEDB;
-  --gris-suave: #F2F3F1;
+  /* Arena #EFE0D3 — fondos suaves y textos sobre terracota */
+  --arena: #EFE0D3;
+  --crema: #FBF5EF;             /* fondo general de la invitación */
 
-  /* Noir Black #1B1717 — textos */
-  --negro: #1B1717;
-  --negro-suave: #3A3333;   /* texto secundario */
+  /* Marrón cálido #3B2A22 — textos */
+  --marron: #3B2A22;
+  --marron-suave: #5C463B;      /* texto secundario */
+
+  /* Alias antiguos (compatibilidad con lo ya escrito) */
+  --rojo: var(--terracota);
+  --rojo-oscuro: var(--terracota-oscuro);
+  --rojo-suave: var(--terracota-suave);
+  --gris-claro: var(--arena);
+  --gris-suave: var(--crema);
+  --negro: var(--marron);
+  --negro-suave: var(--marron-suave);
 }
 
 /* Utilidades rápidas por si se necesitan en el markup */
-.text-rojo { color: var(--rojo); }
-.bg-rojo { background-color: var(--rojo); }
-.border-rojo { border-color: var(--rojo); }
-.text-negro { color: var(--negro); }
-.bg-gris { background-color: var(--gris-claro); }
+.text-terracota { color: var(--terracota); }
+.bg-terracota { background-color: var(--terracota); }
+.border-terracota { border-color: var(--terracota); }
+.text-marron { color: var(--marron); }
+.bg-arena { background-color: var(--arena); }
+.bg-crema { background-color: var(--crema); }
 
-/* Selección de texto en rojo cereza */
+/* Alias antiguos */
+.text-rojo { color: var(--terracota); }
+.bg-rojo { background-color: var(--terracota); }
+.border-rojo { border-color: var(--terracota); }
+.text-negro { color: var(--marron); }
+.bg-gris { background-color: var(--arena); }
+
+/* Selección de texto en terracota */
 ::selection {
-  background-color: var(--rojo);
-  color: #fff;
+  background-color: var(--terracota);
+  color: var(--crema);
 }
 
 /* Para el nombre */

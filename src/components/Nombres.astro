@@ -5,24 +5,22 @@
 <section class="relative w-full py-12 px-6 overflow-hidden">
 
     <!-- Imagen de hojas de fondo (izquierda) -->
-    <div class="absolute top-[35%] -left-10 sm:-left-12 md:-left-14 -translate-y-1/2 w-28 sm:w-36 md:w-44 z-0 pointer-events-none">
+    <div id="hojas-padres-izq" class="absolute top-[35%] -left-6 sm:-left-7 md:-left-8 -translate-y-1/2 w-16 sm:w-20 md:w-24 z-0 pointer-events-none">
         <img
             src="/imagenes/hojas.webp"
             alt="Hojas decorativas"
             class="w-full h-auto object-contain"
-            style="opacity: 0.25;"
                 loading="lazy"
                 decoding="async"
             />
     </div>
 
     <!-- Imagen de hojas de fondo (derecha, a la altura de los padrinos de civil) -->
-    <div class="absolute top-[82%] -right-10 sm:-right-12 md:-right-14 -translate-y-1/2 w-28 sm:w-36 md:w-44 z-0 pointer-events-none">
+    <div id="hojas-padres-der" class="absolute top-[82%] -right-6 sm:-right-7 md:-right-8 -translate-y-1/2 w-16 sm:w-20 md:w-24 z-0 pointer-events-none">
         <img
             src="/imagenes/hojas.webp"
             alt="Hojas decorativas"
             class="w-full h-auto object-contain scale-x-[-1]"
-            style="opacity: 0.25;"
                 loading="lazy"
                 decoding="async"
             />
@@ -32,7 +30,7 @@
 
         <!-- Título principal -->
         <div id="titulo-bendicion" class="text-center mb-3">
-            <p class="text-[#1B1717] text-sm sm:text-base md:text-lg font-serif tracking-[0.15em] leading-relaxed">
+            <p class="text-[#A24F35] text-sm sm:text-base md:text-lg font-serif tracking-[0.15em] leading-relaxed">
                 CON LA BENDICIÓN DE DIOS<br />
                 Y DE NUESTROS PADRES
             </p>
@@ -40,93 +38,92 @@
 
         <!-- Divisor ornamental -->
         <div class="flex items-center justify-center gap-4 mb-10">
-            <span class="block w-12 sm:w-16 h-px bg-gradient-to-r from-transparent to-[#810100]/70"></span>
-            <span class="text-[#810100] text-sm leading-none">&#10070;</span>
-            <span class="block w-12 sm:w-16 h-px bg-gradient-to-l from-transparent to-[#810100]/70"></span>
-        </div>
-
-        <!-- PADRES DE LA NOVIA -->
-        <div id="padres-novia" class="relative z-10 w-full mb-9">
-            <!-- Título "Padres de la Novia" -->
-            <div class="text-center mb-3">
-                <h3 class="font-great-vibes text-[clamp(2.1rem,8.8vw,3.5rem)] leading-tight text-[#810100] tracking-wide whitespace-nowrap">
-                    Padres de la Novia
-                </h3>
-            </div>
-
-            <!-- Nombres de los padres de la novia -->
-            <div class="text-center space-y-2">
-                <p class="text-[#1B1717] text-sm sm:text-base md:text-lg font-serif tracking-[0.12em]">
-                    ELSA ROMERO
-                </p>
-                <p class="text-[#1B1717] text-sm sm:text-base md:text-lg font-serif tracking-[0.12em]">
-                    ANTONIO GARCÍA
-                </p>
-            </div>
-        </div>
-
-        <!-- Separador entre familias -->
-        <div class="flex items-center justify-center gap-3 mb-9">
-            <span class="block w-10 sm:w-14 h-px bg-gradient-to-r from-transparent to-[#810100]/60"></span>
-            <span class="w-1.5 h-1.5 rotate-45 bg-[#1B1717]"></span>
-            <span class="block w-10 sm:w-14 h-px bg-gradient-to-l from-transparent to-[#810100]/60"></span>
+            <span class="block w-12 sm:w-16 h-px bg-gradient-to-r from-transparent to-[#A24F35]/70"></span>
+            <span class="text-[#A24F35] text-sm leading-none">&#10070;</span>
+            <span class="block w-12 sm:w-16 h-px bg-gradient-to-l from-transparent to-[#A24F35]/70"></span>
         </div>
 
         <!-- PADRES DEL NOVIO -->
-        <div id="padres-novio" class="relative z-10 w-full">
+        <div id="padres-novio" class="relative z-10 w-full mb-9">
             <!-- Título "Padres del Novio" -->
             <div class="text-center mb-3">
-                <h3 class="font-great-vibes text-[clamp(2.1rem,8.8vw,3.5rem)] leading-tight text-[#810100] tracking-wide whitespace-nowrap">
+                <h3 class="font-great-vibes text-[clamp(2.1rem,8.8vw,3.5rem)] leading-tight text-[#A24F35] tracking-wide whitespace-nowrap">
                     Padres del Novio
                 </h3>
             </div>
 
             <!-- Nombres de los padres del novio -->
             <div class="text-center space-y-2">
-                <p class="text-[#1B1717] text-sm sm:text-base md:text-lg font-serif tracking-[0.12em]">
-                    GABRIELA MIRANDA
+                <p class="text-[#3B2A22] text-sm sm:text-base md:text-lg font-serif tracking-[0.12em]">
+                    SR. BENJAMÍN VICENTE CASPA
                 </p>
-                <p class="text-[#1B1717] text-sm sm:text-base md:text-lg font-serif tracking-[0.12em]">
-                    MARCELO ZAMORANO
+                <p class="text-[#3B2A22] text-sm sm:text-base md:text-lg font-serif tracking-[0.12em]">
+                    SRA. LEONARDA YUCRA DE VICENTE
+                </p>
+            </div>
+        </div>
+
+        <!-- Separador entre familias -->
+        <div class="flex items-center justify-center gap-3 mb-9">
+            <span class="block w-10 sm:w-14 h-px bg-gradient-to-r from-transparent to-[#A24F35]/60"></span>
+            <span class="w-1.5 h-1.5 rotate-45 bg-[#3B2A22]"></span>
+            <span class="block w-10 sm:w-14 h-px bg-gradient-to-l from-transparent to-[#A24F35]/60"></span>
+        </div>
+
+        <!-- PADRES DE LA NOVIA -->
+        <div id="padres-novia" class="relative z-10 w-full">
+            <!-- Título "Padres de la Novia" -->
+            <div class="text-center mb-3">
+                <h3 class="font-great-vibes text-[clamp(2.1rem,8.8vw,3.5rem)] leading-tight text-[#A24F35] tracking-wide whitespace-nowrap">
+                    Padres de la Novia
+                </h3>
+            </div>
+
+            <!-- Nombres de los padres de la novia -->
+            <div class="text-center space-y-2">
+                <p class="text-[#3B2A22] text-sm sm:text-base md:text-lg font-serif tracking-[0.12em]">
+                    SR. JAIME LOPEZ COLQUEHUANCA
+                </p>
+                <p class="text-[#3B2A22] text-sm sm:text-base md:text-lg font-serif tracking-[0.12em]">
+                    SRA. CATALINA CANDIA LEÓN
                 </p>
             </div>
         </div>
 
         <!-- Separador antes de los padrinos -->
         <div class="flex items-center justify-center gap-3 my-9">
-            <span class="block w-10 sm:w-14 h-px bg-gradient-to-r from-transparent to-[#810100]/60"></span>
-            <span class="w-1.5 h-1.5 rotate-45 bg-[#1B1717]"></span>
-            <span class="block w-10 sm:w-14 h-px bg-gradient-to-l from-transparent to-[#810100]/60"></span>
+            <span class="block w-10 sm:w-14 h-px bg-gradient-to-r from-transparent to-[#A24F35]/60"></span>
+            <span class="w-1.5 h-1.5 rotate-45 bg-[#3B2A22]"></span>
+            <span class="block w-10 sm:w-14 h-px bg-gradient-to-l from-transparent to-[#A24F35]/60"></span>
         </div>
 
         <!-- PADRINOS -->
         <div id="padrinos" class="w-full">
             <!-- Nombres de los padrinos -->
             <div class="text-center space-y-2">
-                <h3 class="font-great-vibes text-[clamp(2.1rem,8.8vw,3.5rem)] leading-tight text-[#810100] tracking-wide whitespace-nowrap !mb-3">
-                    Padrinos de Religión
+                <!-- Mismo tamaño que los demás títulos. Sin whitespace-nowrap:
+                     si no entra en una línea, parte en dos de forma equilibrada. -->
+                <h3 class="font-great-vibes text-[clamp(2.1rem,8.8vw,3.5rem)] leading-snug text-[#A24F35] tracking-wide [text-wrap:balance] !mb-3">
+                    Padrinos de Religión y Civil
                 </h3>
-                <p class="text-[#1B1717] text-sm sm:text-base md:text-lg font-serif tracking-[0.12em]">
-                    MARTHA MALDONADO
+                <p class="text-[#3B2A22] text-sm sm:text-base md:text-lg font-serif tracking-[0.12em]">
+                    SR. JAVIER LUIS RAMOS VERA
                 </p>
-                <p class="text-[#1B1717] text-sm sm:text-base md:text-lg font-serif tracking-[0.12em]">
-                    ARMANDO GARVIZU
+                <p class="text-[#3B2A22] text-sm sm:text-base md:text-lg font-serif tracking-[0.12em]">
+                    SRA. ADELAIDA QUISPE DE RAMOS
                 </p>
 
                 <div class="flex items-center justify-center gap-3 !my-5">
-                    <span class="block w-10 sm:w-14 h-px bg-gradient-to-r from-transparent to-[#810100]/60"></span>
-                    <span class="w-1.5 h-1.5 rotate-45 bg-[#1B1717]"></span>
-                    <span class="block w-10 sm:w-14 h-px bg-gradient-to-l from-transparent to-[#810100]/60"></span>
+                    <span class="block w-10 sm:w-14 h-px bg-gradient-to-r from-transparent to-[#A24F35]/60"></span>
+                    <span class="w-1.5 h-1.5 rotate-45 bg-[#3B2A22]"></span>
+                    <span class="block w-10 sm:w-14 h-px bg-gradient-to-l from-transparent to-[#A24F35]/60"></span>
                 </div>
 
-                <h3 class="font-great-vibes text-[clamp(2.1rem,8.8vw,3.5rem)] leading-tight text-[#810100] tracking-wide whitespace-nowrap !mb-3">
-                    Padrinos de Civil
+                <h3 class="font-great-vibes text-[clamp(2.1rem,8.8vw,3.5rem)] leading-tight text-[#A24F35] tracking-wide whitespace-nowrap !mb-3">
+                    Padrino de Torta
                 </h3>
-                <p class="text-[#1B1717] text-sm sm:text-base md:text-lg font-serif tracking-[0.12em]">
-                    GABRIELA PEREDO
-                </p>
-                <p class="text-[#1B1717] text-sm sm:text-base md:text-lg font-serif tracking-[0.12em]">
-                    LUIS MÉNDEZ
+                <p class="text-[#3B2A22] text-sm sm:text-base md:text-lg font-serif tracking-[0.12em]">
+                    LIC. JESÚS REYNALDO LOPEZ CANDIA
                 </p>
             </div>
         </div>
@@ -145,6 +142,33 @@
     gsap.registerPlugin(ScrollTrigger);
 
     document.addEventListener("DOMContentLoaded", () => {
+
+        // ═══ HOJAS DECORATIVAS - Entrada lateral desde su propio lado ═══
+        gsap.fromTo(
+            "#hojas-padres-izq",
+            { opacity: 0, x: -120, rotation: -6 },
+            {
+                opacity: 1,
+                x: 0,
+                rotation: 0,
+                duration: 1.3,
+                ease: "power3.out",
+                scrollTrigger: { trigger: "#hojas-padres-izq", start: "top 92%", toggleActions: "play none none reverse" }
+            }
+        );
+
+        gsap.fromTo(
+            "#hojas-padres-der",
+            { opacity: 0, x: 120, rotation: 6 },
+            {
+                opacity: 1,
+                x: 0,
+                rotation: 0,
+                duration: 1.3,
+                ease: "power3.out",
+                scrollTrigger: { trigger: "#hojas-padres-der", start: "top 92%", toggleActions: "play none none reverse" }
+            }
+        );
         console.log("🎊 Iniciando animaciones de padres...");
 
         // ═══ TÍTULO "CON LA BENDICIÓN DE DIOS" ═══
@@ -284,7 +308,7 @@
     }
 
     section p:hover {
-        color: #810100;
+        color: #A24F35;
         transition: color 0.3s ease;
     }
 </style>

@@ -15,78 +15,50 @@
     </div>
 
     <!-- Contenido principal -->
-    <div class="relative z-10 flex flex-col items-center justify-center px-6 py-6 w-full max-w-md">
-
-        <!-- Frase superior ornamental -->
-        <div id="frase-superior" class="flex items-center gap-3 sm:gap-4 mb-2">
-            <span class="block w-10 sm:w-14 h-px bg-gradient-to-r from-transparent to-[#A24F35]/60"></span>
-            <p class="font-serif text-[clamp(0.9rem,4.2vw,1.35rem)] leading-none uppercase tracking-[0.3em] text-[#7B3823] whitespace-nowrap">
-                Nuestra boda
-            </p>
-            <span class="block w-10 sm:w-14 h-px bg-gradient-to-l from-transparent to-[#A24F35]/60"></span>
-        </div>
-
+    <div class="relative z-10 flex flex-col items-center justify-center px-6 py-8 w-full max-w-md">
+        
         <!-- Marco con flores y nombres -->
         <div id="contenedor-principal" class="relative w-full flex justify-center items-center">
-
-            <!-- Imagen del marco con flores (centro.webp) -->
-            <div class="relative w-[21rem] h-[24rem] sm:w-96 sm:h-[28rem] md:w-[26rem] md:h-[32rem]">
+            
+            <!-- Imagen del marco con flores (FloresCentro.webp) -->
+            <div class="relative w-72 h-96 sm:w-80 sm:h-[28rem] md:w-96 md:h-[32rem]">
                 <img
                     id="marco-flores"
                     src="/imagenes/centro.webp"
                     alt="Marco decorativo"
                     class="w-full h-full object-contain"
                 />
-
+                
                 <!-- Nombres de los novios DENTRO del marco -->
-                <div class="absolute inset-0 flex flex-col items-center justify-center px-10 sm:px-12">
-                    <h2 id="nombre-john" class="font-great-vibes text-[clamp(1.9rem,9vw,2.75rem)] leading-tight text-[#A24F35] tracking-wide text-center whitespace-nowrap">
-                        Alex Sander
+                <div class="absolute inset-0 flex flex-col items-center justify-center px-8">
+                    <h2 id="nombre-john" class="font-great-vibes text-5xl sm:text-6xl md:text-7xl text-[#A24F35] tracking-wide text-center">
+                        John
                     </h2>
-
-                    <div id="ampersand" class="flex items-center gap-2 my-1.5">
-                        <div class="w-8 sm:w-10 h-px bg-gradient-to-r from-transparent to-[#A24F35]/70"></div>
-                        <span class="text-[#A24F35] text-xl sm:text-2xl font-charm italic">y</span>
-                        <div class="w-8 sm:w-10 h-px bg-gradient-to-l from-transparent to-[#A24F35]/70"></div>
+                    
+                    <div id="ampersand" class="flex items-center gap-3 my-3">
+                        <div class="w-12 h-px bg-[#A24F35]"></div>
+                        <span class="text-[#A24F35] text-3xl sm:text-4xl font-charm italic">y</span>
+                        <div class="w-12 h-px bg-[#A24F35]"></div>
                     </div>
-
-                    <h2 id="nombre-damarys" class="font-great-vibes text-[clamp(1.9rem,9vw,2.75rem)] leading-tight text-[#A24F35] tracking-wide text-center whitespace-nowrap">
-                        Lucía
+                    
+                    <h2 id="nombre-damarys" class="font-great-vibes text-5xl sm:text-6xl md:text-7xl text-[#A24F35] tracking-wide text-center">
+                        Damarys
                     </h2>
                 </div>
             </div>
 
         </div>
 
-        <!-- Fecha del evento (una sola línea) -->
-        <div id="bloque-fecha" class="-mt-1 flex flex-col items-center">
-
-            <!-- Divisor ornamental -->
-            <div class="flex items-center justify-center gap-3 mb-3">
-                <span class="block w-10 sm:w-14 h-px bg-gradient-to-r from-transparent to-[#A24F35]/60"></span>
-                <span class="text-[#A24F35] text-[0.7rem] leading-none">&#10070;</span>
-                <span class="block w-10 sm:w-14 h-px bg-gradient-to-l from-transparent to-[#A24F35]/60"></span>
-            </div>
-
-            <p class="font-serif text-[0.7rem] sm:text-sm uppercase tracking-[0.22em] text-[#7B3823] whitespace-nowrap">
-                Sábado 03 de Octubre de 2026
-            </p>
-
-        </div>
-
         <!-- Botón INGRESAR -->
-        <div class="mt-6 flex justify-center">
-            <button
+        <div class="mt-8 flex justify-center">
+            <button 
                 id="btn-ingresar"
-                class="group relative px-9 py-3 bg-[#A24F35] hover:bg-[#7B3823] text-[#FBF5EF] font-serif text-sm sm:text-base uppercase tracking-[0.2em] rounded-lg shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl overflow-hidden"
+                class="group relative px-10 py-3 bg-[#A24F35] hover:bg-[#7B3823] text-[#FBF5EF] font-sans text-base md:text-lg uppercase tracking-widest rounded-lg shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl overflow-hidden"
             >
-                <!-- Filete interior elegante -->
-                <span class="pointer-events-none absolute inset-1.5 rounded border border-[#FBF5EF]/30 transition-all duration-300 group-hover:inset-[7px]"></span>
-
                 <!-- Efecto brillante al hacer hover -->
-                <span class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-[#FBF5EF]/25 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></span>
-
-                <span class="relative z-10">Ingresar</span>
+                <span class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></span>
+                
+                <span class="relative z-10 font-semibold">Ingresar</span>
             </button>
         </div>
 
@@ -102,13 +74,6 @@
 
     document.addEventListener('DOMContentLoaded', () => {
         console.log("💐 Iniciando animaciones de portada...");
-
-        // ═══ FRASE SUPERIOR "NUESTRA BODA" ═══
-        gsap.fromTo(
-            "#frase-superior",
-            { opacity: 0, y: -15 },
-            { opacity: 1, y: 0, duration: 0.8, ease: "power2.out", delay: 0.2 }
-        );
 
         // ═══ MARCO CON FLORES - Scale desde el centro ═══
         gsap.fromTo(
@@ -135,7 +100,7 @@
         });
 
         // ═══ NOMBRE JOHN - Letra por letra ═══
-        const textoJohn = "Alex Sander";
+        const textoJohn = "John";
         const contenedorJohn = document.getElementById("nombre-john");
         if (contenedorJohn) {
             contenedorJohn.innerHTML = textoJohn
@@ -171,7 +136,7 @@
         );
 
         // ═══ NOMBRE DAMARYS - Letra por letra ═══
-        const textoDamarys = "Lucía";
+        const textoDamarys = "Damarys";
         const contenedorDamarys = document.getElementById("nombre-damarys");
         if (contenedorDamarys) {
             contenedorDamarys.innerHTML = textoDamarys
@@ -199,13 +164,6 @@
             });
         }
 
-        // ═══ "NOS CASAMOS" + FECHA ═══
-        gsap.fromTo(
-            "#bloque-fecha",
-            { opacity: 0, y: 25 },
-            { opacity: 1, y: 0, duration: 0.9, ease: "power3.out", delay: 2.0 }
-        );
-
         // ═══ BOTÓN INGRESAR CON FUNCIONALIDAD ═══
         const btnIngresar = document.getElementById('btn-ingresar');
         const portada = document.getElementById('portada-bienvenida');
@@ -214,7 +172,7 @@
         gsap.fromTo(
             "#btn-ingresar",
             { opacity: 0, y: 30, scale: 0.9 },
-            { opacity: 1, y: 0, scale: 1, duration: 0.6, ease: "back.out(1.5)", delay: 2.5 }
+            { opacity: 1, y: 0, scale: 1, duration: 0.6, ease: "back.out(1.5)", delay: 2.2 }
         );
 
         btnIngresar?.addEventListener('click', () => {
