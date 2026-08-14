@@ -84,9 +84,6 @@
 
             <!-- Viñeta superior sutil para dar profundidad -->
             <div class="pointer-events-none absolute top-0 left-0 w-full h-28 bg-gradient-to-b from-black/15 to-transparent"></div>
-
-            <!-- Degradado de desvanecimiento -->
-            <div id="degradado" class="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-[#FBF5EF] to-transparent"></div>
         </div>
     </div>
 
@@ -235,13 +232,6 @@
             "#imagen-principal",
             { opacity: 0, y: -50 },
             { opacity: 1, y: 0, duration: 1, ease: "power2.out", delay: 0, scrollTrigger: stNF }
-        );
-
-        // ═══ DEGRADADO - Aparece después de la imagen ═══
-        gsap.fromTo(
-            "#degradado",
-            { opacity: 0 },
-            { opacity: 1, duration: 0.8, ease: "power2.out", delay: 0.5, scrollTrigger: stNF }
         );
 
         // ═══ TEXTO DE INVITACIÓN - Fade in desde abajo ═══
